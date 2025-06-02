@@ -259,7 +259,7 @@ button:hover::before {
 .tooltip {
   position: relative;
   cursor: help;
-  text-decoration: underline;
+  text-decoration: none;
   color: #C14364;
 }
 
