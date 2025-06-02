@@ -165,9 +165,9 @@ function showSlide(n) {
     }
 }
 
-// Auto-advance slides every 8 seconds (optional)
+// Auto-advance slides every 15 seconds (optional)
 setInterval(() => {
     if (document.querySelector('.slideshow-container')) {
         changeSlide(1);
     }
-}, 8000);
+}, 15000);
