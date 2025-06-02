@@ -1,7 +1,7 @@
 body {
   font-family: 'Quicksand', 'Trebuchet MS', Arial, sans-serif;
   background: linear-gradient(135deg, #FFD1E2 0%, #FFE5F1 50%, #FFF0F8 100%);
-  color: #406FD8;
+  color: #ED6C43;
   margin: 0;
   padding: 0;
   animation: fadeIn 0.8s ease-in;
@@ -32,7 +32,7 @@ body {
 }
 
 header {
-  background-color: #ED6C43;
+  background-color: #406FD8;
   color: white;
   padding: 1rem;
   text-align: center;
@@ -63,7 +63,7 @@ nav ul li:hover {
 }
 
 nav ul li a {
-  color: #406FD8;
+  color: #ED6C43;
   text-decoration: none;
   font-weight: bold;
   padding: 10px 15px;
@@ -101,7 +101,7 @@ main p, main ul {
 footer {
   text-align: center;
   padding: 1rem;
-  background-color: #ED6C43;
+  background-color: #406FD8;
   color: white;
 }
 
@@ -116,15 +116,15 @@ form {
 input, textarea {
   padding: 0.5rem;
   font-size: 1rem;
-  border: 2px solid #406FD8;
+  border: 2px solid #ED6C43;
   border-radius: 4px;
   transition: all 0.3s ease;
 }
 
 input:focus, textarea:focus {
   outline: none;
-  border-color: #ED6C43;
-  box-shadow: 0 0 10px rgba(237, 108, 67, 0.3);
+  border-color: #406FD8;
+  box-shadow: 0 0 10px rgba(64, 111, 216, 0.3);
   transform: scale(1.02);
 }
 
@@ -135,7 +135,7 @@ button {
 }
 
 button {
-  background-color: #406FD8;
+  background-color: #ED6C43;
   color: white;
   cursor: pointer;
   border: none;
@@ -145,9 +145,9 @@ button {
 }
 
 button:hover {
-  background-color: #2E5BC6;
+  background-color: #C14364;
   transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(64, 111, 216, 0.3);
+  box-shadow: 0 4px 12px rgba(237, 108, 67, 0.3);
 }
 
 button:active {
@@ -185,9 +185,9 @@ button:hover::before {
   max-width: 250px;
   margin-bottom: 20px;
   padding: 15px;
-  background: linear-gradient(135deg, #FFD1E2, #FFE5F1);
+  background: linear-gradient(135deg, #FFFFFF, #F8F9FA);
   border-radius: 15px;
-  box-shadow: 0 4px 15px rgba(237, 108, 67, 0.2);
+  box-shadow: 0 4px 15px rgba(64, 111, 216, 0.2);
   transition: all 0.3s ease;
   animation: fadeIn 0.8s ease-in;
 }
@@ -304,7 +304,7 @@ button:hover::before {
   max-width: 100%;
   height: 600px;
   margin: auto;
-  background: linear-gradient(135deg, #FFE5B4, #FFF0E6);
+  background: linear-gradient(135deg, #FFFFFF, #F8F9FA);
   border-radius: 20px;
   overflow: hidden;
   box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
@@ -359,7 +359,7 @@ button:hover::before {
 
 /* Mission Statement in Slide */
 .mission-statement {
-  background: linear-gradient(135deg, #FFF0E6, #FFE5B4);
+  background: linear-gradient(135deg, #FFFFFF, #F8F9FA);
   border-radius: 15px;
   padding: 40px;
   max-width: 700px;
@@ -410,7 +410,7 @@ button:hover::before {
 .bio-content {
   flex: 1;
   min-width: 300px;
-  background: linear-gradient(135deg, #FFF0E6, #FFE5B4);
+  background: linear-gradient(135deg, #FFFFFF, #F8F9FA);
   border-radius: 20px;
   padding: 30px;
   border: 3px solid #2CA18C;
@@ -531,7 +531,7 @@ button:hover::before {
   text-align: center;
   max-width: 250px;
   padding: 20px;
-  background: linear-gradient(135deg, #FFE5B4, #FFF0E6);
+  background: linear-gradient(135deg, #FFFFFF, #F8F9FA);
   border-radius: 15px;
   box-shadow: 0 4px 15px rgba(255, 145, 107, 0.2);
   transition: all 0.3s ease;
@@ -627,14 +627,14 @@ button:hover::before {
   width: 100%;
   height: auto;
   border-radius: 15px;
-  border: 4px solid #406FD8;
-  box-shadow: 0 8px 25px rgba(64, 111, 216, 0.3);
+  border: 4px solid #ED6C43;
+  box-shadow: 0 8px 25px rgba(237, 108, 67, 0.3);
   transition: all 0.3s ease;
 }
 
 .chart-img:hover {
   transform: scale(1.02);
-  box-shadow: 0 12px 35px rgba(64, 111, 216, 0.4);
+  box-shadow: 0 12px 35px rgba(237, 108, 67, 0.4);
 }
 
 .stats-gallery {
@@ -664,7 +664,7 @@ button:hover::before {
   text-align: center;
   margin: 40px 0;
   padding: 30px;
-  background: linear-gradient(135deg, #FFE5B4, #FFF0E6);
+  background: linear-gradient(135deg, #FFFFFF, #F8F9FA);
   border-radius: 20px;
   border: 3px solid #FF916B;
 }
