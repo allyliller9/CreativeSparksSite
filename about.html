@@ -22,35 +22,68 @@
       </ul>
     </nav>
   </header>
-  <main>
-    <section class="founders-section">
-      <img src="images/founders.jpg" alt="Camp Founders" class="founders-photo" />
-      <p class="founders-caption"><strong>Camp Founders – Future Engineer and Surgeon!</strong></p>
-      
+  
+  <main class="slideshow-container">
+    <!-- Slide 1: Camp Founders -->
+    <div class="slide active">
+      <div class="founders-section">
+        <img src="images/founders.jpg" alt="Camp Founders" class="founders-photo" />
+        <p class="founders-caption"><strong>Camp Founders – Future Engineer and Surgeon!</strong></p>
+      </div>
+    </div>
+    
+    <!-- Slide 2: Mission -->
+    <div class="slide">
       <div class="mission-statement">
+        <h2>Our Mission</h2>
         <p>We started Creative Sparks in 2021 after realizing how few fun, engaging spaces existed for girls to get involved in STEM. Representation in science and technology is still way too low for women—especially young girls—and we knew we could do something about it. This camp combines our love for STEM with creativity, community, and confidence-building. Our goal is to help every camper see herself as a future scientist, engineer, inventor, or artist.</p>
       </div>
-    </section>
-
-    <section class="bio-section">
-      <div class="bio-card">
-        <h3>Ally's Bio</h3>
-        <p>Hi! I'm Ally, and I'm passionate about science, creativity, and making learning fun. I plan to become a chemical engineer because I love building things, exploring how materials work, and applying chemistry to real-world problems. I founded Creative Sparks to give girls the chance to experiment and explore STEM and art in a space that's hands-on, inclusive, and exciting.</p>
+    </div>
+    
+    <!-- Slide 3: Ally's Bio -->
+    <div class="slide">
+      <div class="bio-slide">
+        <img src="images/ally-science.jpg" alt="Ally in science environment" class="bio-photo" />
+        <div class="bio-content">
+          <p>Hi! I'm Ally, and I'm passionate about science, creativity, and making learning fun. I plan to become a chemical engineer because I love building things, exploring how materials work, and applying chemistry to real-world problems. I founded Creative Sparks to give girls the chance to experiment and explore STEM and art in a space that's hands-on, inclusive, and exciting.</p>
+        </div>
       </div>
-
-      <div class="bio-card">
-        <h3>Anna's Bio</h3>
-        <p>Hi, I'm Anna! I'm fascinated by how the human body works, and I dream of becoming a surgeon someday. I help run Creative Sparks to show girls that science isn't just for textbooks—it's something we can touch, build, and be proud of. Whether we're doing cool experiments or making art, I want every camper to feel confident and inspired.</p>
+    </div>
+    
+    <!-- Slide 4: Anna's Bio -->
+    <div class="slide">
+      <div class="bio-slide">
+        <img src="images/anna-science.jpg" alt="Anna in science environment" class="bio-photo" />
+        <div class="bio-content">
+          <p>Hi, I'm Anna! I'm fascinated by how the human body works, and I dream of becoming a surgeon someday. I help run Creative Sparks to show girls that science isn't just for textbooks—it's something we can touch, build, and be proud of. Whether we're doing cool experiments or making art, I want every camper to feel confident and inspired.</p>
+        </div>
       </div>
-    </section>
-
-    <section class="camper-message">
-      <div class="message-box">
-        <h3>A Message to Our Campers</h3>
-        <p><strong>"We're so excited to meet you this summer! Be ready to dream big, build boldly, and explore your creativity!"</strong></p>
+    </div>
+    
+    <!-- Slide 5: Message to Campers -->
+    <div class="slide">
+      <div class="camper-message">
+        <div class="message-box">
+          <h3>A Message to Our Campers</h3>
+          <p><strong>"We're so excited to meet you this summer! Be ready to dream big, build boldly, and explore your creativity!"</strong></p>
+        </div>
       </div>
-    </section>
+    </div>
+    
+    <!-- Navigation arrows -->
+    <button class="nav-arrow prev" onclick="changeSlide(-1)">❮</button>
+    <button class="nav-arrow next" onclick="changeSlide(1)">❯</button>
+    
+    <!-- Slide indicators -->
+    <div class="slide-indicators">
+      <span class="indicator active" onclick="currentSlide(1)"></span>
+      <span class="indicator" onclick="currentSlide(2)"></span>
+      <span class="indicator" onclick="currentSlide(3)"></span>
+      <span class="indicator" onclick="currentSlide(4)"></span>
+      <span class="indicator" onclick="currentSlide(5)"></span>
+    </div>
   </main>
+  
   <footer>
     <p>Contact: <a href="mailto:allyliller9@icloud.com">allyliller9@icloud.com</a> | Phone: (+1) 440-985-8320 | Located in Avon Lake, Ohio</p>
   </footer>

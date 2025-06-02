@@ -123,3 +123,51 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 });
+
+// Slideshow functionality
+let currentSlideIndex = 1;
+
+function changeSlide(direction) {
+    showSlide(currentSlideIndex += direction);
+}
+
+function currentSlide(n) {
+    showSlide(currentSlideIndex = n);
+}
+
+function showSlide(n) {
+    const slides = document.querySelectorAll('.slide');
+    const indicators = document.querySelectorAll('.indicator');
+    
+    if (n > slides.length) {
+        currentSlideIndex = 1;
+    }
+    if (n < 1) {
+        currentSlideIndex = slides.length;
+    }
+    
+    // Hide all slides
+    slides.forEach(slide => {
+        slide.classList.remove('active');
+    });
+    
+    // Remove active from all indicators
+    indicators.forEach(indicator => {
+        indicator.classList.remove('active');
+    });
+    
+    // Show current slide and activate indicator
+    if (slides[currentSlideIndex - 1]) {
+        slides[currentSlideIndex - 1].classList.add('active');
+    }
+    if (indicators[currentSlideIndex - 1]) {
+        indicators[currentSlideIndex - 1].classList.add('active');
+    }
+}
+
+// Auto-advance slides every 8 seconds (optional)
+setInterval(() => {
+    if (document.querySelector('.slideshow-container')) {
+        changeSlide(1);
+    }
+}, 8000);

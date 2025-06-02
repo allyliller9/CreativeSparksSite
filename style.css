@@ -298,9 +298,39 @@ button:hover::before {
   box-shadow: 0 4px 15px rgba(255, 145, 107, 0.2);
 }
 
+/* Slideshow Container */
+.slideshow-container {
+  position: relative;
+  max-width: 100%;
+  height: 600px;
+  margin: auto;
+  background: linear-gradient(135deg, #FFE5B4, #FFF0E6);
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* Individual Slides */
+.slide {
+  display: none;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  padding: 40px;
+  box-sizing: border-box;
+  animation: fadeIn 0.5s ease-in;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.slide.active {
+  display: flex;
+}
+
+/* Founders Section in Slide */
 .founders-section {
   text-align: center;
-  margin-bottom: 40px;
   animation: fadeIn 0.8s ease-in;
 }
 
@@ -312,7 +342,7 @@ button:hover::before {
   border: 4px solid #FF916B;
   box-shadow: 0 8px 25px rgba(255, 145, 107, 0.3);
   transition: all 0.3s ease;
-  animation: bounceIn 1s ease-out 0.5s both;
+  margin-bottom: 20px;
 }
 
 .founders-photo:hover {
@@ -321,91 +351,101 @@ button:hover::before {
 }
 
 .founders-caption {
-  font-size: 18px;
+  font-size: 20px;
   color: #C14364;
   font-weight: 600;
   margin: 15px 0;
-  animation: slideInFromTop 0.8s ease-out 0.7s both;
 }
 
+/* Mission Statement in Slide */
 .mission-statement {
-  background: linear-gradient(135deg, #FFE5B4, #FFF0E6);
+  background: linear-gradient(135deg, #FFF0E6, #FFE5B4);
   border-radius: 15px;
-  padding: 25px;
-  margin: 25px auto;
-  max-width: 800px;
+  padding: 40px;
+  max-width: 700px;
   box-shadow: 0 4px 15px rgba(255, 145, 107, 0.2);
-  animation: fadeIn 1s ease-in 0.9s both;
+  border: 3px solid #FF916B;
+}
+
+.mission-statement h2 {
+  color: #C14364;
+  font-size: 28px;
+  margin-bottom: 20px;
+  font-weight: 600;
 }
 
 .mission-statement p {
-  font-size: 16px;
+  font-size: 18px;
   line-height: 1.6;
   color: #2CA18C;
   margin: 0;
 }
 
-.bio-section {
+/* Bio Slide Layout */
+.bio-slide {
   display: flex;
-  gap: 30px;
-  margin: 40px 0;
+  gap: 40px;
+  align-items: center;
+  max-width: 800px;
   flex-wrap: wrap;
   justify-content: center;
 }
 
-.bio-card {
-  background: linear-gradient(135deg, #FFF0E6, #FFE5B4);
+.bio-photo {
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
   border-radius: 20px;
-  padding: 30px;
-  max-width: 400px;
-  flex: 1;
-  min-width: 300px;
-  box-shadow: 0 6px 20px rgba(44, 161, 140, 0.2);
+  border: 4px solid #2CA18C;
+  box-shadow: 0 8px 25px rgba(44, 161, 140, 0.3);
   transition: all 0.3s ease;
-  animation: bounceIn 0.8s ease-out 1.1s both;
-  border: 3px solid #2CA18C;
 }
 
-.bio-card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 12px 30px rgba(44, 161, 140, 0.3);
+.bio-photo:hover {
+  transform: scale(1.05);
+  box-shadow: 0 12px 35px rgba(44, 161, 140, 0.5);
   border-color: #C14364;
 }
 
-.bio-card h3 {
-  color: #C14364;
-  font-size: 20px;
-  margin-bottom: 15px;
-  font-weight: 600;
+.bio-content {
+  flex: 1;
+  min-width: 300px;
+  background: linear-gradient(135deg, #FFF0E6, #FFE5B4);
+  border-radius: 20px;
+  padding: 30px;
+  border: 3px solid #2CA18C;
+  box-shadow: 0 6px 20px rgba(44, 161, 140, 0.2);
 }
 
-.bio-card p {
+.bio-content p {
   color: #2CA18C;
   line-height: 1.6;
-  font-size: 15px;
+  font-size: 16px;
   margin: 0;
 }
 
+/* Message to Campers in Slide */
 .camper-message {
-  text-align: center;
-  margin: 50px 0 30px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
 }
 
 .message-box {
   background: linear-gradient(135deg, #C14364, #FF916B);
   color: white;
   border-radius: 25px;
-  padding: 30px;
+  padding: 40px;
   max-width: 600px;
-  margin: 0 auto;
   box-shadow: 0 8px 25px rgba(193, 67, 100, 0.3);
   animation: pulse 2s infinite ease-in-out;
   transform-origin: center;
 }
 
 .message-box h3 {
-  font-size: 22px;
-  margin-bottom: 15px;
+  font-size: 24px;
+  margin-bottom: 20px;
   font-weight: 600;
 }
 
@@ -413,6 +453,63 @@ button:hover::before {
   font-size: 18px;
   line-height: 1.5;
   margin: 0;
+}
+
+/* Navigation Arrows */
+.nav-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(193, 67, 100, 0.8);
+  color: white;
+  border: none;
+  padding: 15px 20px;
+  font-size: 24px;
+  cursor: pointer;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+  z-index: 100;
+}
+
+.nav-arrow:hover {
+  background: rgba(193, 67, 100, 1);
+  transform: translateY(-50%) scale(1.1);
+}
+
+.nav-arrow.prev {
+  left: 20px;
+}
+
+.nav-arrow.next {
+  right: 20px;
+}
+
+/* Slide Indicators */
+.slide-indicators {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 10px;
+}
+
+.indicator {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.5);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.indicator.active {
+  background: #C14364;
+  transform: scale(1.2);
+}
+
+.indicator:hover {
+  background: #FF916B;
 }
 
 @keyframes pulse {
