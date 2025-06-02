@@ -1,5 +1,5 @@
 body {
-  font-family: 'Comic Sans MS', cursive, Arial, sans-serif;
+  font-family: 'Quicksand', 'Trebuchet MS', Arial, sans-serif;
   background: linear-gradient(135deg, #EEE2D1 0%, #F5E6D3 50%, #FFF0E6 100%);
   color: #2CA18C;
   margin: 0;
@@ -254,4 +254,46 @@ button:hover::before {
   transform: scale(1.1) rotate(-2deg);
   box-shadow: 0 8px 20px rgba(255, 145, 107, 0.4);
   border-color: #C14364;
+}
+
+.tooltip {
+  position: relative;
+  cursor: help;
+  text-decoration: underline;
+  color: #C14364;
+}
+
+.tooltip:hover::after {
+  content: attr(data-tooltip);
+  position: absolute;
+  bottom: 125%;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #333;
+  color: white;
+  padding: 8px 12px;
+  border-radius: 6px;
+  font-size: 12px;
+  white-space: nowrap;
+  z-index: 1000;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.tooltip:hover::before {
+  content: '';
+  position: absolute;
+  bottom: 117%;
+  left: 50%;
+  transform: translateX(-50%);
+  border: 5px solid transparent;
+  border-top-color: #333;
+  z-index: 1000;
+}
+
+.why-section {
+  background: linear-gradient(135deg, #FFE5B4, #FFF0E6);
+  border-radius: 15px;
+  padding: 25px;
+  margin: 20px 0;
+  box-shadow: 0 4px 15px rgba(255, 145, 107, 0.2);
 }
