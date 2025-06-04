@@ -675,26 +675,66 @@ button:hover::before {
   margin-top: 20px;
 }
 
+/* Add decorative doodle elements */
+.doodle-star {
+  position: fixed;
+  font-size: 20px;
+  opacity: 0.2;
+  z-index: -1;
+  animation: twinkle 3s ease-in-out infinite;
+}
+
+.doodle-star:nth-child(1) { top: 15%; left: 15%; animation-delay: 0s; }
+.doodle-star:nth-child(2) { top: 25%; right: 25%; animation-delay: 1s; }
+.doodle-star:nth-child(3) { bottom: 30%; left: 20%; animation-delay: 2s; }
+.doodle-star:nth-child(4) { bottom: 15%; right: 15%; animation-delay: 0.5s; }
+
+@keyframes twinkle {
+  0%, 100% { opacity: 0.2; transform: scale(1); }
+  50% { opacity: 0.5; transform: scale(1.2); }
+}
+
+/* Add hand-drawn underlines to headings */
+h2::after {
+  content: '';
+  display: block;
+  width: 60%;
+  height: 3px;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 5'%3E%3Cpath d='M0,3 Q25,0 50,3 T100,3' stroke='%23ED6C43' stroke-width='2' fill='none'/%3E%3C/svg%3E") repeat-x;
+  margin: 10px auto;
+}
+
+/* Playful image frames */
+.camper-photo, .schedule-photo, .stats-photo {
+  border: 4px solid;
+  border-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cpath d='M0,0 L100,0 L100,100 L0,100 Z' stroke='%23ED6C43' stroke-width='4' fill='none' stroke-dasharray='5,5'/%3E%3C/svg%3E") 4;
+  transform: rotate(-1deg);
+}
+
+.camper-photo:nth-child(even), .schedule-photo:nth-child(even) {
+  transform: rotate(1deg);
+}
+
 @media (max-width: 768px) {
   .bio-section {
     flex-direction: column;
     align-items: center;
   }
-  
+
   .bio-card {
     max-width: 100%;
   }
-  
+
   .camp-highlights {
     flex-direction: column;
     align-items: center;
   }
-  
+
   .stats-header, .intervention-header {
     flex-direction: column;
     text-align: center;
   }
-  
+
   .schedule-gallery, .stats-gallery {
     flex-direction: column;
     align-items: center;
